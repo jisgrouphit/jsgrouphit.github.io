@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  background: #f7f9fc;
+  color: #1f2d3d;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: #0b5ed7;
+}
+
+header {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: white;
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.logo p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: 0.25s;
+  font-size: 15px;
+}
+
+nav a:hover,
+nav a.active {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.hero {
+  padding: 60px 0;
+  background: white;
+}
+
+.hero h2 {
+  font-size: 38px;
+  margin-bottom: 16px;
+  color: #0d47a1;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #445;
+  max-width: 850px;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 22px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #0d47a1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.tag {
+  display: inline-block;
+  background: #e3f2fd;
+  color: #0d47a1;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  margin: 4px 8px 4px 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  background: #1976d2;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: 0.25s;
+}
+
+.button:hover {
+  background: #0d47a1;
+}
+
+.footer {
+  background: #0d1b2a;
+  color: #dce6f2;
+  text-align: center;
+  padding: 24px 0;
+  margin-top: 40px;
+}
+
+.notice {
+  background: #fff8e1;
+  border-left: 5px solid #ffb300;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.timeline-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.small {
+  color: #667;
+  font-size: 14px;
+}
+
+.student-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.student-card h3 {
+  margin-top: 0;
+  color: #0d47a1;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #d32f2f;
+  font-weight: bold;
+}
