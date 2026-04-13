@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>韩佶课题组 | 哈尔滨工业大学</title>
+  <meta name="description" content="哈尔滨工业大学韩佶老师课题组主页" />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --primary: #8c1d40;
+      --primary-2: #a62a4f;
+      --max: 1080px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 16px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 15px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    .hero {
+      padding: 72px 0 40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 36px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f4e9ed;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: var(--muted);
+      margin: 0 0 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover { background: var(--primary-2); }
+    .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+
+    .hero-side {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .placeholder-photo {
+      min-height: 320px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      border: 1px dashed #c7ccd4;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-weight: 700;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .quick-info .mini {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: #fafafa;
+    }
+
+    .mini-title {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .mini strong {
+      font-size: 16px;
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .content-card {
+      padding: 28px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .research-list,
+    .publication-list,
+    .member-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .item {
+      padding: 18px 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .item h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .person {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #f3f4f6;
+      border: 1px dashed #c7ccd4;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .person h3 {
+      margin: 0 0 4px;
+      font-size: 18px;
+    }
+
+    .person .role {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .person p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+    }
+
+    .contact-block {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .contact-block h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .contact-block p {
+      margin: 6px 0;
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 32px 0 56px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .muted-box {
+      border: 1px dashed #cfd4dc;
+      border-radius: 16px;
+      padding: 16px;
+      color: var(--muted);
+      background: #fafbfc;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .grid-2,
+      .people-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        padding: 12px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .hero {
+        padding-top: 36px;
+      }
+
+      .hero-copy,
+      .content-card {
+        padding: 22px;
+      }
+
+      .quick-info {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        韩佶课题组
+        <small>Harbin Institute of Technology</small>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">首页</a>
+        <a href="#publications">论文</a>
+        <a href="#research">研究</a>
+        <a href="#people">成员</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="card hero-copy">
+          <div class="eyebrow">哈尔滨工业大学 · 课题组主页</div>
+          <h1>韩佶课题组</h1>
+          <p class="lead">
+            这里将用于展示韩佶老师课题组的研究方向、代表论文、团队成员、招生信息与联系方式。
+            当前版本先按照高校课题组主页的常见架构搭建，具体研究内容和成员信息后续可逐步补充。
+          </p>
+          <div class="muted-box">
+            <strong>简介占位：</strong>
+            这里可替换为课题组正式介绍，例如研究主题、学科方向、交叉领域、实验平台、合作方向等。
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#research">查看研究方向</a>
+            <a class="btn btn-secondary" href="#contact">联系方式</a>
+          </div>
+        </div>
+
+        <div class="card hero-side">
+          <div class="placeholder-photo">课题组照片 / 校园照片 / 韩老师照片占位</div>
+          <div class="quick-info">
+            <div class="mini">
+              <div class="mini-title">负责人</div>
+              <strong>韩佶 教授</strong>
+            </div>
+            <div class="mini">
+              <div class="mini-title">单位</div>
+              <strong>哈尔滨工业大学</strong>
+            </div>
+            <div class="mini">
+              <div class="mini-title">研究方向</div>
+              <strong>待补充</strong>
+            </div>
+            <div class="mini">
+              <div class="mini-title">招生信息</div>
+              <strong>待补充</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <div class="section-title">
+          <h2>论文发表</h2>
+          <div class="section-note">Publications</div>
+        </div>
+        <div class="card content-card publication-list">
+          <div class="item">
+            <h3>代表论文 1</h3>
+            <p>作者、题目、会议/期刊、年份。这里先留空，后续可按年份或主题补充。</p>
+          </div>
+          <div class="item">
+            <h3>代表论文 2</h3>
+            <p>作者、题目、会议/期刊、年份。这里先留空，后续可按年份或主题补充。</p>
+          </div>
+          <div class="item">
+            <h3>代表论文 3</h3>
+            <p>作者、题目、会议/期刊、年份。这里先留空，后续可按年份或主题补充。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-title">
+          <h2>研究方向</h2>
+          <div class="section-note">Research</div>
+        </div>
+        <div class="card content-card">
+          <div class="grid-2 research-list">
+            <div class="item">
+              <h3>研究方向 A</h3>
+              <p>这里填写方向简介、核心问题、关键技术路线或应用场景。</p>
+            </div>
+            <div class="item">
+              <h3>研究方向 B</h3>
+              <p>这里填写方向简介、核心问题、关键技术路线或应用场景。</p>
+            </div>
+            <div class="item">
+              <h3>研究方向 C</h3>
+              <p>这里填写方向简介、核心问题、关键技术路线或应用场景。</p>
+            </div>
+            <div class="item">
+              <h3>研究方向 D</h3>
+              <p>这里填写方向简介、核心问题、关键技术路线或应用场景。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="people">
+      <div class="container">
+        <div class="section-title">
+          <h2>团队成员</h2>
+          <div class="section-note">People</div>
+        </div>
+        <div class="card content-card">
+          <div class="people-grid">
+            <div class="person">
+              <div class="avatar">照片</div>
+              <h3>韩佶</h3>
+              <div class="role">课题组负责人</div>
+              <p>职称、研究兴趣、个人主页链接等信息待补充。</p>
+            </div>
+            <div class="person">
+              <div class="avatar">照片</div>
+              <h3>成员待补充</h3>
+              <div class="role">博士生 / 硕士生</div>
+              <p>姓名、研究方向、邮箱、个人介绍待补充。</p>
+            </div>
+            <div class="person">
+              <div class="avatar">照片</div>
+              <h3>成员待补充</h3>
+              <div class="role">博士生 / 硕士生</div>
+              <p>姓名、研究方向、邮箱、个人介绍待补充。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>联系信息</h2>
+          <div class="section-note">Contact</div>
+        </div>
+        <div class="card content-card contact-grid">
+          <div class="contact-block">
+            <h3>单位信息</h3>
+            <p><strong>单位：</strong> 哈尔滨工业大学</p>
+            <p><strong>院系：</strong> 待补充</p>
+            <p><strong>办公地址：</strong> 待补充</p>
+            <p><strong>邮编：</strong> 待补充</p>
+          </div>
+          <div class="contact-block">
+            <h3>联系方式</h3>
+            <p><strong>邮箱：</strong> 待补充</p>
+            <p><strong>电话：</strong> 待补充</p>
+            <p><strong>招生：</strong> 欢迎优秀学生联系，具体信息待补充。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 韩佶课题组 · 哈尔滨工业大学
+    </div>
+  </footer>
+</body>
+</html>
