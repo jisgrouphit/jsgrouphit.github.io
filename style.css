@@ -187,9 +187,7 @@ li {
 .highlight {
   color: #d32f2f;
   font-weight: bold;
-<<<<<<< HEAD
-}
-=======
+
 }
 
 .professor-profile {
@@ -210,4 +208,4 @@ li {
   flex: 1;
   min-width: 260px;
 }
->>>>>>> 92f31ebeb589d59221c0a5b220caa88bc2ac0f71
+
