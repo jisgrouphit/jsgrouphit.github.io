@@ -66,8 +66,15 @@ nav a.active {
 }
 
 .hero {
-  padding: 60px 0;
+  padding: 56px 0;
   background: white;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: 34px;
+  align-items: center;
 }
 
 .hero h2 {
@@ -80,6 +87,53 @@ nav a.active {
   font-size: 18px;
   color: #445;
   max-width: 850px;
+}
+
+.hero-feature {
+  position: relative;
+  min-height: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(13, 71, 161, 0.16);
+  background: #e8f1fb;
+}
+
+.hero-feature img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-feature::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 30, 66, 0.08), rgba(7, 30, 66, 0.62));
+}
+
+.feature-panel {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 22px;
+  z-index: 1;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+}
+
+.feature-panel h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.feature-panel p {
+  margin: 0;
+  max-width: none;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 .section {
@@ -97,6 +151,46 @@ nav a.active {
 .card h3 {
   margin-top: 0;
   color: #0d47a1;
+}
+
+.news-card {
+  background: white;
+  border-radius: 8px;
+  padding: 26px 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.news-card h3 {
+  margin: 0 0 18px;
+  color: #0d47a1;
+  font-size: 26px;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-bottom: 1px solid #e8eef5;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.news-text {
+  color: #334;
+}
+
+.news-item strong {
+  color: #d32f2f;
+  white-space: nowrap;
 }
 
 .grid {
@@ -188,6 +282,21 @@ li {
   color: #d32f2f;
   font-weight: bold;
 
+}
+
+@media (max-width: 860px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
 }
 
 .professor-profile {
@@ -295,4 +404,3 @@ li {
 .stu-list li:last-child {
   border-bottom: none;
 }
-
